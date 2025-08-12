@@ -5,5 +5,6 @@ const usersRouter = Router();
 usersRouter.get("/", usersController.getUsernames)
 usersRouter.get("/new", usersController.createUsernameGet);
 usersRouter.post("/new", usersController.createUsernamePost);
+usersRouter.get("/delete", usersController.deleteUsernameGet);
 
 module.exports = usersRouter;

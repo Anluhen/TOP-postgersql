@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      <%= title %>
-    </title>
-  </head>
-  <body>
-    <h1>
-      <%= title %>
-    </h1>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <form action="/" method="get">
+    <label for="search">Search:</label>
+    <input type="text" name="search" id="search">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    <h2>Usernames:</h2>
+    <% users.map(user=>{ %>
+      <li>
+        <%= user.username %>
+      </li>
+      <% }); %>
+  </ul>
+  <a href="/new">Add user</a>
+  <a href="/">Back</a>
+  <a href="/delete">Delete all users</a>
+</body>
+
 </html>
